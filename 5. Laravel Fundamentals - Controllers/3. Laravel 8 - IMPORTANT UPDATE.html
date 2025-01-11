@@ -1,0 +1,5 @@
+<p>Laravel 8 Update</p><p><br></p><p>On the lecture called called "Routing Controllers" I&nbsp;show you how to route your requests using a controller. Laravel recently updated this feature and the code changed. </p><p>You are going to see me, using a code similar to this below</p><pre class="prettyprint linenums">Route::get('/', 'HomeController@index')</pre><p>Every time you see that code, you need to change it to something similar to the ones below </p><p><br></p><p><code>&nbsp; Route::get('/checking', '\App\Http\Controllers\HomeController@index');&nbsp; </code></p><p><br></p><p>As you can probably tell, now we have to include the whole path of that controller in the method.</p><p><br></p><h4><strong>OR</strong></h4><p><br></p><p>You can also use the one below, which I&nbsp;like best.</p><p><br></p><pre class="prettyprint linenums">use App\Http\Controllers\HomeController; //
+
+
+Route::get('/', [EdwinsController::class, 'index']); 
+</pre><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p>

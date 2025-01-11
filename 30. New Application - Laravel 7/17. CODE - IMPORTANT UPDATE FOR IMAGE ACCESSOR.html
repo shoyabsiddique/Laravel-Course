@@ -1,0 +1,7 @@
+<p>So on the next lecture, I&nbsp;show you how to use an Accessor for images, just in case you guys use HTTP images or local images for your path AND&nbsp;you encounter some issues, here is a quick fix for that.</p><pre class="prettyprint linenums">getPostImageAttribute($value) {
+if (strpos($value, 'https://') !== FALSE || strpos($value, 'http://') !== FALSE) {
+    return $value;
+}
+return asset('storage/' . $value);
+}
+</pre><p><br></p><p>This code above will make sure you can use local paths and http paths for your images, so remember it, just in case. </p>

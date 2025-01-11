@@ -1,0 +1,7 @@
+<p>You are going to see me using it to show you how to upload files, so I'm creating this small article to show you how to create a regular form for uploads without using any type of package just in case you want to use this form instead.</p><p><br></p><h4><strong>Example of a regular form for files</strong></h4><p><br></p><pre class="prettyprint linenums">&lt;form action="/uploadfile" method="post" enctype="multipart/form-data"&gt;
+    @csrf
+    &lt;div class="form-group"&gt;
+        &lt;input type="file" class="form-control-file" name="fileToUpload" id="exampleInputFile"&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</pre>
